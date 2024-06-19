@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backend Development Requirements</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+      color: #495057;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .section-title {
+      font-size: 24px;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+    .requirement {
+      margin-bottom: 20px;
+    }
+    .requirement p {
+      font-size: 16px;
+    }
+    .requirement ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .requirement ul li:before {
+      content: "\2022";
+      color: #007bff;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 mx-auto">
+      <h1 class="text-center mb-4">Project Requirements for Backend Development</h1>
+
+      <!-- Section 1: User Registration and Login System -->
+      <div class="requirement">
+        <h2 class="section-title">1. User Registration and Login System</h2>
+        <p>Registration Requirements:</p>
+        <ul>
+          <li>Customers must provide their Gmail address and phone number.</li>
+          <li>Implement a CAPTCHA system for security.</li>
+          <li>Send a verification code to the customer's Gmail to complete registration.</li>
+          <li>Customers must also enter an invitation code to register, which helps track who invited them.</li>
+          <li>Each invitation code should have a limit and be linked to a supervisor's account.</li>
+          <li>I need a total of 10 supervisor accounts. Supervisors should be able to view and manage data of users they invited.</li>
+        </ul>
+      </div>
+
+      <!-- Section 2: Supervisor Account Capabilities -->
+      <div class="requirement">
+        <h2 class="section-title">2. Supervisor Account Capabilities</h2>
+        <ul>
+          <li>Supervisors should have the ability to:</li>
+          <li>View the data of the users they invited.</li>
+          <li>Edit certain aspects of user data such as account balance and deposit details.</li>
+          <li>Display specific orders.</li>
+          <li>Change user information, including Telegram handles.</li>
+        </ul>
+      </div>
+
+      <!-- Section 3: Deposit System -->
+      <div class="requirement">
+        <h2 class="section-title">3. Deposit System</h2>
+        <ul>
+          <li>When a customer wants to make a deposit, a button should generate a wallet address from the backend.</li>
+          <li>Only the admin should have the capability to change this wallet address.</li>
+          <li>The admin should also be able to create new supervisor accounts.</li>
+        </ul>
+      </div>
+
+      <!-- Section 4: Withdrawal System -->
+      <div class="requirement">
+        <h2 class="section-title">4. Withdrawal System</h2>
+        <ul>
+          <li>Withdrawal Requirements:</li>
+          <li>Users must enter the amount and withdrawal password.</li>
+          <li>A notification should be sent to the user's supervisor for approval.</li>
+          <li>Supervisors should verify the user's wallet address and send the withdrawal amount.</li>
+          <li>Wallet Management:</li>
+          <li>Users must submit a front and back photo of their ID, and a face recognition video clip.</li>
+          <li>This information should be visible to the supervisor for verification.</li>
+          <li>Users should select the type of wallet address and paste it.</li>
+          <li>Supervisors must verify the wallet address. Once verified, a "Verified" box should be displayed.</li>
+          <li>The same withdrawal password set by the user will be used for withdrawals.</li>
+          <li>Only supervisors and admins have the authority to verify wallet addresses.</li>
+          <li>Admins should have access to oversee all supervisors' activities and manage their users.</li>
+        </ul>
+      </div>
+
+      <!-- Section 5: Orders System -->
+      <div class="requirement">
+        <h2 class="section-title">5. Orders System</h2>
+        <ul>
+          <li>Orders should be displayed as packages that can be allocated to users based on their deposit amount.</li>
+          <li>Users should be shown their total commission and account balance according to their deposit.</li>
+          <li>If a user's order exceeds their deposit amount, they should receive a message to make a deposit before submitting the order.</li>
+          <li>Specific details and a sample link for how the orders should be displayed will be provided later.</li>
+        </ul>
+      </div>
+
+      <!-- Section 6: Default Accounts -->
+      <div class="requirement">
+        <h2 class="section-title">6. Default Accounts</h2>
+        <ul>
+          <li>Create some default accounts to demonstrate how to submit withdrawals, deposits, and orders.</li>
+          <li>Provide examples of these default accounts for reference.</li>
+        </ul>
+      </div>
+
+      <!-- Additional Requirements -->
+      <div class="requirement">
+        <h2 class="section-title">Additional Requirements</h2>
+        <ul>
+          <li>Ensure robust security measures throughout the system.</li>
+          <li>Detailed documentation of the backend code and functionalities.</li>
+        </ul>
+      </div>
+
+    </div><!-- /.col-lg-10 -->
+  </div><!-- /.row -->
+</div><!-- /.container -->
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
